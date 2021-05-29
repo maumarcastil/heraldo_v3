@@ -1,5 +1,4 @@
 import dbConnect from "utils/dbConnect";
-
 dbConnect();
 
 export default (req, res) => {
