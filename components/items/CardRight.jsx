@@ -8,11 +8,7 @@ const CardLeft = () => {
           <div className="col-md-7 ">
             <h3>Nueva estrella</h3>
             <p className="d-flex justify-content">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
-              totam, odit at magni illum vitae reiciendis eum autem vero, magnam
-              quam dicta quibusdam ratione nulla ad quasi, eligendi sunt
-              voluptates? Lorem ipsum dolor sit amet consectetur adipisicing
-              elit.
+              
             </p>
           </div>
           <div className="col-md-5 ps-2">

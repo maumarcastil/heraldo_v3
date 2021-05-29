@@ -1,59 +1,115 @@
-import Head from "next/head";
+import React, { useState, useEffect } from "react";
 import Header from "components/Header";
 import Footer from "components/Footer";
-import CardTop from "components/items/CardTop";
-import CardType from "components/items/CardType";
-
-//Impor data
-import { section1, section2 } from "data/info";
+import OpcionesIngreso from "components/OpcionesIngreso";
+import Spinner from "components/Spinner";
+import { getAllNotices } from "utils/notices";
+import Noticia from "components/Notice";
 
 export default function Home() {
+  const [noticia, setNoticia] = useState();
+  const [spinner, setSpinner] = useState(true);
+
+  useEffect(async () => {
+    getAllNotices(setNoticia);
+    setTimeout(() => {
+      setSpinner(false);
+    }, 2000);
+    console.log(noticia);
+  }, []);
+
   return (
     <>
-      <div className="container">
-        <Header title="el heraldo" />
+      {spinner ? (
+        <Spinner />
+      ) : (
+        <div className="container">
+          <OpcionesIngreso />
+          <Header title="el heraldo" options={true} />
+          <br />
+          <br />
 
-        <div className="content pt-2">
-          <section>
-            <div className="justify-content-between">
-              {section2.map((data) => (
-                <CardType
-                  title={data.title}
-                  img={data.img}
-                  content={data.content}
-                />
-              ))}
+          {/* seccion 1 */}
+          <div className="row">
+            <div className="col-md-3">
+              <h5>Deportes</h5>
+              {noticia
+                .filter(
+                  (not) =>
+                    not.categoria === "deportes" || not.categoria === "Deportes"
+                )
+                .map((not) => (
+                  <Noticia data={not} key={not._id} />
+                ))}
             </div>
-          </section>
 
-          <section>
-            <div className="row justify-content-between">
-              {section1.map((data) => (
-                <CardTop
-                  title={data.title}
-                  img={data.img}
-                  content={data.content}
-                />
-              ))}
+            <div className="col-md-6 ">
+              <h5>Judiciales</h5>
+              {noticia
+                .filter(
+                  (not) =>
+                    not.categoria === "judicial" || not.categoria === "Judicial"
+                )
+                .map((not) => (
+                  <Noticia data={not} key={not._id} />
+                ))}
             </div>
-          </section>
 
-          <section>
-            <div className="justify-content-between">
-              {section2.map((data) => (
-                <CardType
-                  title={data.title}
-                  img={data.img}
-                  content={data.content}
-                />
-              ))}
+            <div className="col-md-3">
+              <h5>Economia</h5>
+              {noticia
+                .filter(
+                  (not) =>
+                    not.categoria === "economia" || not.categoria === "Economia"
+                )
+                .map((not) => (
+                  <Noticia data={not} key={not._id} />
+                ))}
             </div>
-          </section>
+          </div>
+          <br />
+
+          <div className="row">
+            <div className="col-md-3">
+              <h5>Sociales</h5>
+              {noticia
+                .filter(
+                  (not) =>
+                    not.categoria === "sociales" || not.categoria === "Sociales"
+                )
+                .map((not) => (
+                  <Noticia data={not} key={not._id} />
+                ))}
+            </div>
+
+            <div className="col-md-6 ">
+              <h5>Politica</h5>
+              {noticia
+                .filter(
+                  (not) =>
+                    not.categoria === "politica" || not.categoria === "Politica"
+                )
+                .map((not) => (
+                  <Noticia data={not} key={not._id} />
+                ))}
+            </div>
+
+            <div className="col-md-3">
+              <h5>Salud</h5>
+              {noticia
+                .filter(
+                  (not) =>
+                    not.categoria === "salud" || not.categoria === "Salud"
+                )
+                .map((not) => (
+                  <Noticia data={not} key={not._id} />
+                ))}
+            </div>
+          </div>
+
+          <Footer />
         </div>
-
-        <Footer />
-      </div>
-
+      )}
       <style jsx global>{`
         p {
           text-align: justify;

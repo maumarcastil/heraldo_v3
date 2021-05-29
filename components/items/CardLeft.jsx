@@ -1,12 +1,72 @@
 import React from "react";
 
 const CardLeft = ({ title, img, content }) => {
-
-  const type = Math.floor(Math.random() * (2 - 0)) + 0; 
-
+  const type = Math.floor(Math.random() * (2 - 0)) + 0;
 
   return (
     <>
+      <div className="d-flex flex-column mt-3 w-100">
+        <div className="d-flex w-100 row">
+          <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-lg-12 d-flex flex-column">
+            {/* ESTA ES LA CARD */}
+            <div className="d-flex flex-column w-100">
+              <h2 className="fz-18 mb-3">Titulo Generico</h2>
+              <p className="fz-16 mb-2">lorem</p>
+              <img src="" className="w-100" />
+              <a className="fz-16">Ver mas informacion</a>
+            </div>
+          </div>
+          <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-lg-12">
+            <div className="d-flex flex-column w-100">
+              <h2 className="fz-18">Titulo Generico</h2>
+              <p className="fz-16">lorem</p>
+              <img src="" className="w-100" />
+              <a className="fz-16">Ver mas informacion</a>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex w-100 align-items-center flex-wrap">
+          <div className="d-flex flex-column me-3">
+            <h2 className="fz-18 mb-3">Titulo Generico</h2>
+            <p className="fz-16">lorem</p>
+            <img src="" className="w-100" />
+            <a className="fz-16 mt-2">Ver mas informacion</a>
+          </div>
+          <div className="d-flex flex-column me-4">
+            <h2 className="fz-18">Titulo Generico</h2>
+            <p className="fz-16">lorem</p>
+            <img src="" className="w-100" />
+            <a className="fz-16">Ver mas informacion</a>
+          </div>
+        </div>
+        <div class="d-flex w-100 flex-wrap">
+          <div className="d-flex flex-column w-100">
+            <h2 className="fz-18">Titulo Generico</h2>
+            <p className="fz-16">lorem</p>
+            <img src="" className="w-100" />
+            <a className="fz-16">Ver mas informacion</a>
+          </div>
+        </div>
+        <div className="d-flex w-100 row">
+          <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-lg-12">
+            <div className="d-flex flex-column w-100">
+              <h2 className="fz-18">Titulo Generico</h2>
+              <p className="fz-16">lorem</p>
+              <img src="" className="w-100" />
+              <a className="fz-16">Ver mas informacion</a>
+            </div>
+          </div>
+          <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-lg-12">
+            <div className="d-flex flex-column w-100">
+              <h2 className="fz-18">Titulo Generico</h2>
+              <p className="fz-16">lorem</p>
+              <img src="" className="w-100" />
+              <a className="fz-16">Ver mas informacion</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div className="col-sm pb-4">
         <div className="row g-0">
           <div className="col-md-5">
@@ -18,13 +78,7 @@ const CardLeft = ({ title, img, content }) => {
           </div>
           <div className="col-md-7 ps-2">
             <h3>Nueva estrella</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
-              totam, odit at magni illum vitae reiciendis eum autem vero, magnam
-              quam dicta quibusdam ratione nulla ad quasi, eligendi sunt
-              voluptates? Lorem ipsum dolor sit amet consectetur adipisicing
-              elit.
-            </p>
+            <p>Hola</p>
           </div>
         </div>
       </div>

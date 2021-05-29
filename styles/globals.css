@@ -14,3 +14,52 @@ a {
 * {
   box-sizing: border-box;
 }
+.text-center {
+  text-align: center;
+}
+.title-red {
+  color: red !important;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 700;
+}
+.white{
+  color: white;
+}
+.fz-16{
+  font-size: 16px;
+}
+.border-b{
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid gray;
+}
+.outline-none{
+  outline: none !important;
+}
+.form-control:focus{
+  border-color: none !important;
+}
+.br-58{
+  border-radius: 58px;
+}
+.mw-296{
+  width: 100%;
+  max-width: 296px;
+}
+.MuiFormControl-root{
+  width: 100%;
+}
+.MuiInput-root {
+  width: 100%;
+}
+.bg-news{
+  background-color: #b0bdc2;
+}
+.mw-128{
+  max-width: 128px;
+}
+.mw-680{
+  max-width: 680px;
+}

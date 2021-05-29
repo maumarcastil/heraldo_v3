@@ -61,3 +61,46 @@ export const section2 = [
   },
 ];
 
+
+
+
+
+
+{/* 
+  <div className="content pt-2">
+          <section>
+            <div className="justify-content-between">
+              {section2.map((data) => (
+                <CardType
+                  title={data.title}
+                  img={data.img}
+                  content={data.content}
+                />
+              ))}
+            </div>
+          </section>
+
+          <section>
+            <div className="row justify-content-between">
+              {section1.map((data) => (
+                <CardTop
+                  title={data.title}
+                  img={data.img}
+                  content={data.content}
+                />
+              ))}
+            </div>
+          </section>
+
+          <section>
+            <div className="justify-content-between">
+              {section2.map((data) => (
+                <CardType
+                  title={data.title}
+                  img={data.img}
+                  content={data.content}
+                />
+              ))}
+            </div>
+          </section>
+        </div> */}

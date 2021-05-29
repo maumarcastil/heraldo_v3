@@ -113,6 +113,12 @@
 .logo {
   height: 1em;
 }
+.mw-128{
+  max-width: 128px;
+}
+.MuiInput-root {
+  width: 100%;
+}
 
 @media (max-width: 600px) {
   .grid {
