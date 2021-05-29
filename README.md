@@ -25,7 +25,7 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 - Todos los end-points.
 - Todo el back-end esta realizado.
 - Puede registrar, logear y deslogear el usuario.
-- Puede registrar, logear y deslogear el usuario.
+- Puede crear noticias y eliminar.
 - etc
 
 ## Participantes
